@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash-register</title>
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
-<body>
+<body id="body" class="container">
     <h1>Cash Return Register</h1>
     <div>
         <h2>Enter the bill and cash given to know how much to return.</h2>
         <h3>Bill Amount:</h3>
-        <textarea id="bill"></textarea>
+        <input id="bill"></input>
 
         <h3>Cash Given:</h3>
-        <textarea id="Cash"></textarea>
+        <input id="cash"></input>
 
         <button id="check">Check</button>
+
+        <p id="error"></p>
 
         <table id="tables">
             <caption>Return Change</caption>
@@ -33,17 +37,18 @@
             </tr>
             <tr>
                 <th>Notes to be given</th>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
-                <td id="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
+                <td class="number-notes"></td>
             </tr>
-
         </table>
+
+        <script src="app.js" type="text/javascript"></script>
 
     </div>
 </body>

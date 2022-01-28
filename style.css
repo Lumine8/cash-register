@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #da5c3c;
+  }
+
+#body{
+    text-align: center;
+    margin: auto;
+}
+
+#tables{
+    display: block;
+    margin: auto;
+    align-self: center;
+}
+
+tr{
+    display:block;
+
+}
+
+
