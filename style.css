@@ -1,23 +1,64 @@
 :root {
-    --primary-color: #da5c3c;
+    --primary-color: #1e829b;
   }
 
 #body{
     text-align: center;
-    margin: auto;
 }
+h1{
+    color: var(--primary-color);
+}
+.container {
+    margin: 4rem auto 7rem;
+    text-align: center;
+  }
 
-#tables{
-    display: block;
+
+th, td{
+    border:2px solid var(--primary-color);
+    width: 0%;
+    
+}
+#table {
+    width: 50%;
+    text-align: justify;
     margin: auto;
-    align-self: center;
 }
 
 tr{
-    display:block;
-
-}
-tr th td{
-    border:2px solid chocolate;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: var(--primary-color); 
 }
 
+#caption {
+    margin: 1rem auto;
+    font-size: large;
+    font-weight: 500;
+  }
+
+#check{
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: large;
+    cursor: pointer;
+    outline: #fff;
+    margin: auto;
+    display: block;
+  }
+
+  #error{
+    display: block;
+    font-size: larger;
+    margin: 1rem 0 0;
+  }
+
+  #cash,#bill{
+      border: 2px solid var(--primary-color);
+      border-radius: 5px;
+      height: 30px;
+      width: 20%;
+  }
