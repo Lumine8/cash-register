@@ -17,5 +17,7 @@ tr{
     display:block;
 
 }
-
+tr th td{
+    border:2px solid chocolate;
+}
 
