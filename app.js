@@ -5,37 +5,27 @@ var message = document.querySelector("#error")
 var notes = document.querySelectorAll(".number-notes")
 var availablenotes = [1000, 500, 200, 100, 50, 10, 5, 1]
 
+check.addEventListener("click", billsandcashamount)
+
 function billsandcashamount(){
-    hideMessage()
+    
     if (bill.value>0){
         if(cash.value >= bill.value){
-            var amnttoreturn = cash.value -  bill.value;
-                changenumber(amnttoreturn);
+
+            var amnttoreturn = parseInt(cash.value -  bill.value);
+
+            for(var i = 0; i < availablenotes.length; i++){
+                var displaynotes = Math.floor(amnttoreturn / availablenotes[i]);
+                console.log(displaynotes)
+                amnttoreturn = amnttoreturn % availablenotes[i];
+                notes[i].innerText = displaynotes;
+                console.log(amnttoreturn)
+            }
         }else{
-            showMessage("Not enough Cash")
+            message.innerText = "Not enough Cash"
         }
     }  
     else{
-        showMessage("Invalid Bill")
-    }
-
-}
-
-function changenumber(amnttoreturn){
-    for(var i = 0; i < availablenotes.length; i++){
-
-        var displaynotes = Math.floor(amnttoreturn / availablenotes[i]);
-        amnttoreturn = amnttoreturn % availablenotes[i];
-        notes[i].innerText = displaynotes;
+        message.innerText = "Invalid Bill"
     }
 }
-
-function hideMessage() {
-    message.style.display = "none";
-}
-function showMessage(msg){
-    message.style.display = "Block";
-    message.innerText = msg;
-}
-
-check.addEventListener("click", billsandcashamount)
